@@ -8,7 +8,7 @@ Servo servo1;
 #define potPin A0        // Soil moisture sensor pin
 
 int soil = 0;
-int fsoil;
+int fsoil = 0;
 
 CheapStepper stepper(8, 9, 10, 11);
 
@@ -28,7 +28,6 @@ void setup() {
 }
 
 void loop() {
-  fsoil = 0;
 
   // IR Sensor Detection
   if (digitalRead(ir) == 0) {
